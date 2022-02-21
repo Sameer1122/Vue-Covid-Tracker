@@ -1,7 +1,7 @@
 <template>
-  <div class="flex items-center justify-center">
-    <div>{{ text }}</div>
-    <div>{{ timestamp }}</div>
+  <div class="flex flex-col items-center justify-center space-y-4 mb-4">
+    <div class="font-bold text-xl">{{ text }}</div>
+    <div class="font-bold text-gray-400">{{ timestamp }}</div>
   </div>
 </template>
 

@@ -19,6 +19,10 @@ export default {
       const data = res.json();
       return data;
     },
+    getCountry(country) {
+      this.stats = country;
+      this.title = country.Country;
+    },
   },
   async created() {
     const data = await this.fetchCovidData();
@@ -34,11 +38,11 @@ export default {
 </script>
 
 <template>
-  <main>
+  <main class="w-11/12 mx-auto">
     <div v-if="!loading">
       <DataTitle :date="date" :text="title" />
       <DataBoxexVue :stats="stats" />
-      <SelectCountriesVue :countries="countries" />
+      <SelectCountriesVue @get-country="getCountry" :countries="countries" />
     </div>
     <div v-else>Fetchingggggg</div>
   </main>
