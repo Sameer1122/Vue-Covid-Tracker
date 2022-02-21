@@ -1,10 +1,11 @@
 <script setup>
-import HelloWorld from "@/components/HelloWorld.vue";
-import "./App.css";
+import { RouterLink, RouterView } from "vue-router";
+import Header from "./components/Header.vue";
 </script>
 
 <template>
-  <h1 class="text-2xl">When</h1>
+  <Header />
+  <RouterView />
 </template>
 
 <style></style>
